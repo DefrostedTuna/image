@@ -1,0 +1,940 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+fieldset {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  margin: 0 0 0.75em;
+  padding: 1.5em; }
+
+input,
+label,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em; }
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.375em; }
+  label.required::after {
+    content: "*"; }
+  label abbr {
+    display: none; }
+
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple=multiple] {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  transition: border-color 150ms ease;
+  width: 100%; }
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+  select[multiple=multiple]:hover {
+    border-color: #b1b1b1; }
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+  select[multiple=multiple]:focus {
+    border-color: #477dca;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+    outline: none; }
+  input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
+  select[multiple=multiple]:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed; }
+    input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
+    select[multiple=multiple]:disabled:hover {
+      border: 1px solid #ddd; }
+
+textarea {
+  resize: vertical; }
+
+input[type="search"] {
+  appearance: none; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: 0.375em; }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    display: inline-block; }
+
+input[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%; }
+
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto; }
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+dl {
+  margin-bottom: 0.75em; }
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  dl dd {
+    margin: 0; }
+
+table {
+  border-collapse: collapse;
+  font-feature-settings: "kern", "liga", "tnum";
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%; }
+
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left; }
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0; }
+
+tr,
+td,
+th {
+  vertical-align: middle; }
+
+body {
+  color: #333;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: 1em;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  color: #477dca;
+  text-decoration: none;
+  transition: color 150ms ease; }
+  a:active, a:focus, a:hover {
+    color: #355e98; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+/**
+ * File: _import.scss
+ * Type: SASS import
+ * Author: Chris Humboldt
+ */
+/**
+ * File: _import.scss
+ * Type: SASS import file
+ * Author: Chris Humboldt
+ * Last Edited: 22 April 2015
+ */
+/**
+ * SASS File: 		_functions.scss
+ * Type: 			development
+ * Author:        	Chris Humboldt
+ * Last Edited:   	6 August 2014
+ */
+/**
+ * SASS File: 		_mixins.scss
+ * Type: 			development
+ * Author:        	Chris Humboldt
+ * Last Edited:   	9 August 2014
+ */
+/**
+ * SASS File: 		_animation.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	5 March 2015
+ */
+/**
+ * SASS File: 		_arrow.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	29 July 2014
+ * Based on: 		http://cssarrowplease.com/
+ */
+/**
+ * SASS File: 		_background.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	1 September 2014
+ */
+/**
+ * SASS File: 		_border.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	6 August 2014
+ */
+/**
+ * SASS File: 		_breakpoint.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	9 February 2015
+ */
+/**
+ * SASS File: 		_colour.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	4 April 2015
+ */
+/**
+ * File: _display.scss
+ * Type: SASS basic file
+ * Author: Chris Humboldt
+ * Last Edited: 22 April 2015
+ */
+/**
+ * SASS File: 		_drop-shadow.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	29 July 2014
+ */
+/**
+ * SASS File: 		_global.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	22 May 2014
+ */
+/**
+ * SASS File:       _gradient.scss
+ * Type:            partial
+ * Author:          Chris Humboldt
+ * Last Edited:     9 February 2015
+ */
+/**
+ * SASS File: 		_input-types.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	13 May 2014
+ */
+/**
+ * File: _interaction.scss
+ * Type: SASS basic file
+ * Author: Chris Humboldt
+ * Last Edited: 22 April 2015
+ */
+/**
+ * SASS File: 		_ios.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	22 March 2014
+ */
+/**
+ * SASS File: 		_layout.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	9 February 2015
+ */
+/**
+ * File: _list
+ * Type: SASS basic file
+ * Author: Chris Humboldt
+ * Last Edited: 22 April 2015
+ */
+/**
+ * SASS File: 		_responsive-layout.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	4 December 2014
+ */
+/**
+ * SASS File: 		_size.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	1 September 2014
+ */
+/**
+ * SASS File: 		_spacing.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	1 September 2013
+ */
+/**
+ * File: _text.scss
+ * Type: SASS basic file
+ * Author: Chris Humboldt
+ * Last Edited: 22 April 2015
+ */
+/**
+ * SASS File: 		_transform.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	18 August 2014
+ * Edited by: 		Chris Humboldt
+ */
+/**
+ * File: _element.scss
+ * Type: SASS file
+ * Author: Chris Humboldt
+ * Last Edited: 22 April 2015
+ */
+/**
+ * File: _list.scss
+ * Type: SASS module file
+ * Author: Chris Humboldt
+ * Last Edited: 22 April 2015
+ */
+/**
+ * SASS File: 		_background.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	1 September 2014
+ */
+/**
+ * SASS File: 		_display.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	23 September 2014
+ */
+/**
+ * SASS File: 		_global.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	13 May 2014
+ */
+/**
+ * SASS File: 		_layout.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	23 September 2014
+ */
+/**
+ * SASS File: 		_position.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	23 September 2014
+ */
+/**
+ * SASS File: 		_responsive-layout.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	25 September 2014
+ */
+/**
+ * SASS File: 		_sizing.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	23 September 2014
+ */
+/**
+ * SASS File: 		_spacing.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	23 September 2013
+ */
+/**
+ * SASS File: 		_text.scss
+ * Requires: 		_responsive-layout.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	23 September 2014
+ */
+/**
+ * SASS File: 		_execute.scss
+ * Type: 			partial
+ * Author:        	Chris Humboldt
+ * Last Edited:   	17 August 2014
+ */
+/**
+ * File: _drop-down.scss
+ * Type: SASS module
+ * Author: Chris Humboldt
+ */
+/**
+ * File: _setup.scss
+ * Type: SASS module
+ * Author: Chris Humboldt
+ */
+@font-face {
+  font-family: 'buttonplate';
+  src: url("icon-font-buttonplate/icomoon.eot?c4hmew");
+  src: url("icon-font-buttonplate/icomoon.eot?#iefixc4hmew") format("embedded-opentype"), url("icon-font-buttonplate/icomoon.woff?c4hmew") format("woff"), url("icon-font-buttonplate/icomoon.ttf?c4hmew") format("truetype"), url("icon-font-buttonplate/icomoon.svg?c4hmew#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/**
+ * File: _shape.scss
+ * Type: SASS module
+ * Author: Chris Humboldt
+ */
+/**
+ * File: _size.scss
+ * Type: SASS module
+ * Author: Chris Humboldt
+ */
+/**
+ * File: _style.scss
+ * Type: SASS module
+ * Author: Chris Humboldt
+ */
+/**
+ * File: _execute.scss
+ * Type: SASS execute
+ * Author: Chris Humboldt
+ */
+.flash-alert {
+  background-color: #fff6bf;
+  color: #8c7800;
+  display: block;
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-alert p {
+    margin-bottom: 0; }
+  .flash-alert a {
+    color: #594c00;
+    text-decoration: underline; }
+    .flash-alert a:focus, .flash-alert a:hover {
+      color: black; }
+
+.flash-error {
+  background-color: #fbe3e4;
+  color: #97161b;
+  display: block;
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-error p {
+    margin-bottom: 0; }
+  .flash-error a {
+    color: #6a0f13;
+    text-decoration: underline; }
+    .flash-error a:focus, .flash-error a:hover {
+      color: #110203; }
+
+.flash-notice {
+  background-color: #e5edf8;
+  color: #244e87;
+  display: block;
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-notice p {
+    margin-bottom: 0; }
+  .flash-notice a {
+    color: #19375f;
+    text-decoration: underline; }
+    .flash-notice a:focus, .flash-notice a:hover {
+      color: #04080e; }
+
+.flash-success {
+  background-color: #e6efc2;
+  color: #56651a;
+  display: block;
+  margin-bottom: .5em;
+  margin-top: 1.5em;
+  padding: 0.75em;
+  text-align: center; }
+  .flash-success p {
+    margin-bottom: 0; }
+  .flash-success a {
+    color: #333c10;
+    text-decoration: underline; }
+    .flash-success a:focus, .flash-success a:hover {
+      color: black; }
+
+body {
+  margin: 0;
+  background-color: #f9f9f9; }
+
+.main-wrap {
+  padding: 0 0.5em 0.5em 0.5em; }
+
+header {
+  background-color: #f0f2f4;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.3em; }
+  header h1 {
+    margin: 0; }
+
+.upload-container {
+  text-align: center;
+  padding: 1em 0; }
+
+.upload-wrap {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5em;
+  background-color: #f0f2f4;
+  border: 1px solid #dddddd;
+  width: 245px;
+  max-width: 100%;
+  transition: all ease-in-out 0.5s; }
+  .upload-wrap hr {
+    margin: 1em 1em 0.5em 1em; }
+
+.upload-wrap-on {
+  width: 600px; }
+
+.button-primary {
+  margin: 0.5em auto;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  color: #666666;
+  text-decoration: none;
+  vertical-align: middle;
+  border: medium none #000;
+  background-color: #ebebeb;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-transition: border 0.2s ease-out, background 0.2s ease-out;
+  -moz-transition: border 0.2s ease-out, background 0.2s ease-out;
+  -ms-transition: border 0.2s ease-out, background 0.2s ease-out;
+  -o-transition: border 0.2s ease-out, background 0.2s ease-out;
+  transition: border 0.2s ease-out, background 0.2s ease-out; }
+  .button-primary:visited {
+    color: #666666; }
+  .buttonplate-no-touch .button-primary:hover {
+    cursor: pointer;
+    background-color: whitesmoke; }
+  .button-primary:active {
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+    text-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0;
+    background-color: #ebebeb; }
+  .button-primary .arrow {
+    display: inline-block;
+    height: 10px;
+    width: 12px;
+    line-height: 10px;
+    line-height: 0.625rem;
+    speak: none;
+    font-family: 'buttonplate';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    .button-primary .arrow:before {
+      content: "\f107"; }
+  .button-primary.buttonplate-drop-down ul {
+    position: absolute;
+    padding: 0px;
+    margin-top: 4px;
+    list-style: none;
+    background-color: #fff;
+    border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    background-clip: padding-box;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -moz-transition: all 0.2s ease-out 0s;
+    -o-transition: all 0.2s ease-out 0s;
+    -ms-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s; }
+    .button-primary.buttonplate-drop-down ul li {
+      padding: 0px;
+      margin: 0px; }
+      .button-primary.buttonplate-drop-down ul li:first-child a {
+        border-radius: 2px 2px 0px 0px;
+        -o-border-radius: 2px 2px 0px 0px;
+        -ms-border-radius: 2px 2px 0px 0px;
+        -moz-border-radius: 2px 2px 0px 0px;
+        -webkit-border-radius: 2px 2px 0px 0px;
+        background-clip: padding-box; }
+      .button-primary.buttonplate-drop-down ul li:last-child a {
+        border-radius: 0px 0px 2px 2px;
+        -o-border-radius: 0px 0px 2px 2px;
+        -ms-border-radius: 0px 0px 2px 2px;
+        -moz-border-radius: 0px 0px 2px 2px;
+        -webkit-border-radius: 0px 0px 2px 2px;
+        background-clip: padding-box; }
+      .button-primary.buttonplate-drop-down ul li.line-top {
+        border-top: 1px solid #e6e6e6; }
+      .button-primary.buttonplate-drop-down ul li.line-bottom {
+        border-bottom: 1px solid #e6e6e6; }
+      .button-primary.buttonplate-drop-down ul li a {
+        display: block;
+        text-align: left;
+        color: #383838;
+        text-decoration: none;
+        vertical-align: middle; }
+        .buttonplate-no-touch .button-primary.buttonplate-drop-down ul li a:hover {
+          background-color: whitesmoke; }
+    .button-primary.buttonplate-drop-down ul.open {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      visibility: visible; }
+
+.button-photo {
+  color: #1abc9c;
+  background: transparent;
+  border: 1px solid #1abc9c;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-clip: padding-box;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 54px;
+  line-height: 54px;
+  line-height: 3.375rem;
+  font-size: 16px;
+  font-size: 1rem;
+  overflow: hidden;
+  max-width: 84px;
+  -webkit-transition: max-width 0.3s;
+  transition: max-width 0.5s;
+  transition-delay: 0s;
+  text-align: left;
+  padding-left: 32px; }
+  .button-photo:visited {
+    color: #1abc9c; }
+  .buttonplate-no-touch .button-photo:hover {
+    color: #fff;
+    background-color: #14dcb4;
+    border: 1px solid #14dcb4; }
+  .buttonplate-no-touch .button-photo:active, .button-photo:active {
+    color: #0f6b59;
+    background-color: #1abc9c; }
+  .buttonplate-no-touch .button-photo.button-drop-down ul li a:hover {
+    color: #fff;
+    background-color: #14dcb4; }
+  .button-photo .arrow {
+    margin-left: 16px; }
+  .button-photo.buttonplate-drop-down ul {
+    margin-left: -32px; }
+  .button-photo.buttonplate-drop-down li a {
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 34px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-size: 15px;
+    font-size: 0.9375rem; }
+  .button-photo:hover {
+    max-width: 100%; }
+    .button-photo:hover i {
+      color: white; }
+  .button-photo i {
+    color: #1abc9c; }
+
+#input-file {
+  width: 0.1px !important;
+  height: 0.1px !important;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.button-file-select {
+  color: #047F04;
+  background: transparent;
+  border: 1px solid #047F04;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-clip: padding-box;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 54px;
+  line-height: 54px;
+  line-height: 3.375rem;
+  font-size: 16px;
+  font-size: 1rem; }
+  .button-file-select:visited {
+    color: #047F04; }
+  .buttonplate-no-touch .button-file-select:hover {
+    color: #fff;
+    background-color: #009d00;
+    border: 1px solid #009d00; }
+  .buttonplate-no-touch .button-file-select:active, .button-file-select:active {
+    color: #012601;
+    background-color: #047F04; }
+  .buttonplate-no-touch .button-file-select.button-drop-down ul li a:hover {
+    color: #fff;
+    background-color: #009d00; }
+  .button-file-select .arrow {
+    margin-left: 16px; }
+  .button-file-select.buttonplate-drop-down ul {
+    margin-left: -32px; }
+  .button-file-select.buttonplate-drop-down li a {
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 34px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-size: 15px;
+    font-size: 0.9375rem; }
+
+.button-file-select-on {
+  background-color: #047F04;
+  color: white; }
+
+.selected-file {
+  font-weight: bold;
+  display: table;
+  margin: 0.5em auto;
+  padding: 0.5em 1.5em;
+  border-bottom: 1px solid #4b4b4b;
+  border-radius: 4px; }
+
+.form-wrap {
+  text-align: center; }
+
+.button-submit {
+  color: #fff;
+  background-color: #3C67A6;
+  border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-clip: padding-box;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 54px;
+  line-height: 54px;
+  line-height: 3.375rem;
+  font-size: 16px;
+  font-size: 1rem; }
+  .button-submit:visited {
+    color: #fff; }
+  .buttonplate-no-touch .button-submit:hover {
+    background-color: #1d6cde; }
+  .button-submit:active {
+    color: #243d63;
+    background-color: #3C67A6; }
+  .buttonplate-no-touch .button-submit.button-drop-down ul li a:hover {
+    color: #fff;
+    background-color: #3971c3; }
+  .button-submit .arrow {
+    margin-left: 16px; }
+  .button-submit.buttonplate-drop-down ul {
+    margin-left: -32px; }
+  .button-submit.buttonplate-drop-down li a {
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 34px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-size: 15px;
+    font-size: 0.9375rem; }
+
+.button-photo-on {
+  max-width: 100%;
+  color: white;
+  background-color: #1abc9c; }
+  .button-photo-on i {
+    color: white; }
+
+.pagination li {
+  display: inline-block;
+  margin: 1em 0.2em; }
+.pagination .disabled, .pagination .active {
+  color: white !important; }
+  .pagination .disabled a, .pagination .disabled span, .pagination .active a, .pagination .active span {
+    background-color: #0e6252; }
+    .pagination .disabled a:hover, .pagination .disabled span:hover, .pagination .active a:hover, .pagination .active span:hover {
+      background-color: #0e6252;
+      cursor: not-allowed; }
+.pagination a {
+  color: white; }
+.pagination a, .pagination span {
+  padding: 0.3em 0.7em;
+  background: #1abc9c;
+  border-radius: 2px; }
+  .pagination a:hover, .pagination span:hover {
+    background-color: #1ed7b2; }
+
+.photo-container {
+  *zoom: 1;
+  max-width: 100em;
+  margin-left: auto;
+  margin-right: auto; }
+  .photo-container:before, .photo-container:after {
+    content: " ";
+    display: table; }
+  .photo-container:after {
+    clear: both; }
+
+.photo-wrap {
+  background-color: #f7f7f7;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 1em 0.5em 0.5em 0.5em;
+  margin-bottom: 2em; }
+  .photo-wrap h1 {
+    font-size: 1.3em; }
+  .photo-wrap hr {
+    margin: 0em 0 0.5em 0; }
+
+.photo-gallery {
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.flex-image {
+  -webkit-flex-shrink: 1;
+  -moz-flex-shrink: 1;
+  flex-shrink: 1;
+  -webkit-flex-grow: auto;
+  -moz-flex-grow: auto;
+  flex-grow: auto;
+  -webkit-flex-basis: 1;
+  -moz-flex-basis: 1;
+  flex-basis: 1;
+  width: 100%; }
+  .flex-image img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #f9f9f9;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.247), 0px 0px 0px 0px transparent, 0px 0px 0px 0px transparent; }
+    .flex-image img:hover {
+      cursor: pointer;
+      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.547), 0px 0px 0px 0px transparent, 0px 0px 0px 0px transparent; }
+
+@media screen and (min-width: 600px) {
+  header {
+    font-size: 1.6em; }
+
+  .flex-image {
+    width: 50%;
+    padding: 0.5em; }
+
+  .photo-wrap {
+    font-size: 1.6em; } }
+@media screen and (min-width: 900px) {
+  .flex-image {
+    width: 33%; } }
+@media screen and (min-width: 1200px) {
+  .flex-image {
+    width: 25%; } }
+.photo-input-label {
+  appearance: none;
+  background-color: green;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .photo-input-label:hover, .photo-input-label:focus {
+    background-color: #006600;
+    color: #fff; }
+  .photo-input-label:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    .photo-input-label:disabled:hover {
+      background-color: green; }
+
+.submit-button {
+  appearance: none;
+  background-color: #477dca;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .submit-button:hover, .submit-button:focus {
+    background-color: #3964a2;
+    color: #fff; }
+  .submit-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    .submit-button:disabled:hover {
+      background-color: #477dca; }
+
+/*# sourceMappingURL=app.css.map */
