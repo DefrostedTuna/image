@@ -54,7 +54,7 @@ $('#upload-form').submit(function(e){
             $("input[type=file]").val('');
             $(".button-file-select").removeClass("button-file-select-on");
             //prepend image to front of list
-            $("<div class='flex-image'><a href='photo/" + data.slug + "'>" + "<img src='" + data.thumb_path + "'>" + "</a></div>").prependTo('.photo-gallery').hide().fadeIn(2000);
+            $("<div class='flex-image'><a href='photo/" + data.slug + "'>" + "<img src='" + window.location + data.thumb_path + "'>" + "</a></div>").prependTo('.photo-gallery').hide().fadeIn(2000);
 
 
         },
